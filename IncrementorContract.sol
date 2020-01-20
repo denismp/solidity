@@ -31,7 +31,9 @@ contract IncrementorContract {
     }
 
     // This function is public in nature, but you can't modify
-    // the parameters.
+    // the parameters.  Parameters are in the call data memory
+    // and it is immutable.  Most usefull for array parameters
+    // to save gas.
     function externalIncrement(uint step) external {
         internalIncrement(step);
     }
