@@ -27,7 +27,7 @@ contract IncrementorContract {
         privateIncrement(step);
     }
 
-    // This function is public in nature, but you can modify
+    // This function is public in nature, but you can't modify
     // the parameters.
     function externalIncrement(uint step) external {
         internalIncrement(step);
