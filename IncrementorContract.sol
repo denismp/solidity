@@ -7,9 +7,8 @@ contract IncrementorContract {
     function increment(uint step) public {
         //value += step;
         // If you want to call and the externalIncrement() here,
-        // you have to call it lilke this:
+        // you have to call it using the "this" operator.
         // this.externalIncrement(step);
-        // Note the "this" operator.
         privateIncrement(step);
     }
 
