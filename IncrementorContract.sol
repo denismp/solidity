@@ -6,6 +6,10 @@ contract IncrementorContract {
     // This function is publically viewable via the api.
     function increment(uint step) public {
         //value += step;
+        // If you want to call and the externalIncrement() here,
+        // you have to call it lilke this:
+        // this.externalIncrement(step);
+        // Note the "this" operator.
         privateIncrement(step);
     }
 
