@@ -26,7 +26,8 @@ https://github.com/ethereum/remix-desktop/releases
 3. xcodebuild -version
 4. npm install -g remixd
 5. install the dmg file.
-6. remixd -s /Users/denisputnam/git/solidity --remix-ide package://a7df6d3c223593f3550b35e90d7b0b1f.mod
+6. remixd -s /Users/denisputnam/git/solidity --remix-ide https://remix.ethereum.org
+### remixd -s <absolute-path-to-the-shared-folder> --remix-ide https://remix.ethereum.org
 
 In step 5. you will set it up for the online web IDE. Once you get the remix.app installed, activate the remix plugin from the plugins list. When it tries to connect to your local file system, you will get something like:
 
