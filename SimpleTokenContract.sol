@@ -10,7 +10,7 @@ contract SimpleTokenContract {
     function transfer(address to, uint amount) public {
         require(balanceOf[msg.sender] >= amount, "Sender does not have enough balance.");
         require(balanceOf[msg.sender] + amount > balanceOf[msg.sender], "amount specified will cause an overflow.");
-        balanceOf[msg.sender] == amount;
+        balanceOf[msg.sender] -= amount;
         balanceOf[to] += amount;
     }
 
