@@ -85,3 +85,27 @@ Of course, create you GitHub repo first, so that you can clone it to get started
 remixd -s /Users/denisputnam/git/solidity --remix-ide package://a7df6d3c223593f3550b35e90d7b0b1f.mod
 
 Unfortunately, it doesn't seem to be possible to create new files in the localhost of the FILE EXPLORERS section of the remix IDE.  So I used the Visual Studio Code IDE in conjuction with the remix IDE, so that I can create and edit files locally in the VSC IDE, and then compile and deploy in the remix IDE.
+
+Update:
+It is possible to to use:
+remixd -s /Users/denisputnam/git/ECR721LotteryGift --remix-ide http://remix.ethereum.org
+
+Notice the http vs the https.  This will allow you to use the remix IDE in the browser and see the local directory on your machine.
+
+To do this:
+1. Start the remixd as shown above.
+2. In the remix IDE that you started at http://remix.ethereum.org, connect to localhost.
+    You will see:
+    Sat Feb 08 2020 13:55:21 GMT-0500 (Eastern Standard Time) Remixd is listening on 127.0.0.1:65520
+    Sat Feb 08 2020 13:55:51 GMT-0500 (Eastern Standard Time) Connection accepted.
+3. At this point you should see your local files in the browser remixIDE.
+4. You can then use the Visual Studio Code (VSC) to edit and syntax check your code.
+    1. If you have to set the compiler version in the VSC IDE, then create the file .vscode/settings.json in the
+        project home directory and add the following text:
+        {
+            "solidity.compileUsingRemoteVersion": "0.5.5+commit.47a71e8f"
+        }
+    2. This will cause the VSC solidity compiler to use version 0.5.5.
+5. At this point, any changes that you make locally in VSC or in the browser IDE will be reflected on both sides.
+    1. This will allow you to have a git repo on your local machine that is connected to github on the web and
+        allow to check in changes to your remote github account.
