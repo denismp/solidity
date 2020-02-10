@@ -86,9 +86,9 @@ remixd -s /Users/denisputnam/git/solidity --remix-ide package://a7df6d3c223593f3
 
 Unfortunately, it doesn't seem to be possible to create new files in the localhost of the FILE EXPLORERS section of the remix IDE.  So I used the Visual Studio Code IDE in conjuction with the remix IDE, so that I can create and edit files locally in the VSC IDE, and then compile and deploy in the remix IDE.
 
-Update:
+UPDATE:
 It is possible to to use:
-remixd -s /Users/denisputnam/git/ECR721LotteryGift --remix-ide http://remix.ethereum.org
+remixd -s /Users/denisputnam/git/solidity --remix-ide http://remix.ethereum.org
 
 Notice the http vs the https.  This will allow you to use the remix IDE in the browser and see the local directory on your machine.
 
